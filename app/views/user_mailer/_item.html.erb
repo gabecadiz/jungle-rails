@@ -1,0 +1,16 @@
+  <tr>
+    <td>
+      <h2><%= line_item.product.name %></h2>
+      <br>
+      <p> <%= line_item.product.description %> </p>
+    </td>
+    <td>
+      <p>$<%= line_item.item_price_cents / 100.0 %> <p>
+    </td>
+    <td>
+      <p><%= line_item.quantity %></p>
+    </td>
+    <td>
+      <p>$<%= line_item.total_price_cents / 100.0%> </p>
+    </td>
+  </tr>
