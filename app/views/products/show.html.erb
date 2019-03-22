@@ -13,7 +13,8 @@
       </div>
 
       <div class="col-sm-8">
-        <dl class="dl-horizontal">
+        <dl class="dl-horizontal alert alert-info">
+          <h3>Product Information</h3>
           <dt>Name</dt>
           <dd><%= @product.name %></dd>
           <dt>Description</dt>
@@ -24,6 +25,26 @@
           <dd><%= @product.price %></dd>
         </dl>
       </div>
+    </div>
+
+    <div>
+      <h4> Product Reviews </h4>
+
+      <% if @product.reviews.any? %>
+        <p> Average Rating: <%= @product.reviews.average(:rating) %>
+        <% @product.reviews.each do |review | %>
+          <dl class="dl-horizontal">
+            <dt> User </dt>
+            <dd> <%= review.user_id %> </dd>
+            <dt> Description </dt>
+            <dd> <%= review.description %> </dd>
+            <dt> Rating </dt>
+            <dd> <%= review.rating %> / 5</dd>
+          </dl>
+        <% end %>
+      <% else %>
+        <p> No product reviews at the moment </p>
+      <%end%>
     </div>
 
   </article>
