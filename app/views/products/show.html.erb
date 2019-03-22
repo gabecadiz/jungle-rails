@@ -28,6 +28,10 @@
     </div>
 
     <div>
+      <div class="alert alert-light" role="alert">
+         <p class="review-error"><%= flash[:alert] %></p>
+      </div>
+
       <h4> Product Reviews </h4>
 
       <% if @product.reviews.any? %>
@@ -44,12 +48,6 @@
   <% if current_user %>
     <div class="review-form">
       <h4> Add a review </h4>
-
-
-      <div class="alert alert-danger" role="alert">
-         <%= flash[:alert] %>
-      </div>
-
 
       <%= form_for([@product, @product.reviews.build]) do |f| %>
         <p>
