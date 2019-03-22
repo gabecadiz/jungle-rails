@@ -32,16 +32,25 @@
 
       <% if @product.reviews.any? %>
         <p> Average Rating: <%= @product.reviews.average(:rating) %>
-        <% @product.reviews.each do |review | %>
-          <%= render 'review', review: review %>
+        <% @product.reviews.order(created_at: :desc).each do |review | %>
+          <%= render review %>
         <% end %>
       <% else %>
         <p> No product reviews at the moment </p>
       <%end%>
     </div>
 
+
+  <% if current_user %>
     <div class="review-form">
       <h4> Add a review </h4>
+
+
+      <div class="alert alert-danger" role="alert">
+         <%= flash[:alert] %>
+      </div>
+
+
       <%= form_for([@product, @product.reviews.build]) do |f| %>
         <p>
           <%= f.label :description %><br>
@@ -58,7 +67,8 @@
 
       <% end %>
 
-    </div>
+      </div>
+  <% end %>
 
 
 
