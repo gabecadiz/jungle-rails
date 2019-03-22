@@ -33,19 +33,36 @@
       <% if @product.reviews.any? %>
         <p> Average Rating: <%= @product.reviews.average(:rating) %>
         <% @product.reviews.each do |review | %>
-          <dl class="dl-horizontal">
-            <dt> User </dt>
-            <dd> <%= review.user_id %> </dd>
-            <dt> Description </dt>
-            <dd> <%= review.description %> </dd>
-            <dt> Rating </dt>
-            <dd> <%= review.rating %> / 5</dd>
-          </dl>
+          <%= render 'review', review: review %>
         <% end %>
       <% else %>
         <p> No product reviews at the moment </p>
       <%end%>
     </div>
+
+    <div class="review-form">
+      <h4> Add a review </h4>
+      <%= form_for([@product, @product.reviews.build]) do |f| %>
+        <p>
+          <%= f.label :description %><br>
+          <%= f.text_field(:description, {:class => 'form-control'}) %>
+        </p>
+        <p>
+          <%= f.label :rating %> <br>
+          <%= f.select :rating, options_for_select(1..5), {:class => 'form-control'} %>
+         </p>
+
+         <p>
+          <%= f.submit({:class => 'btn btn-info'}) %>
+         </p>
+
+      <% end %>
+
+    </div>
+
+
+
+
 
   </article>
 
