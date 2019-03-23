@@ -2,6 +2,39 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+#Features
+## User Authentication
+* A new user can go to the registration page and create a new account
+* A user can log into their account by going to the login page
+* passwords are saved on the database using bcrypt gem
+
+##Soldout Badge
+* When a product has a quantity of 0, a sold out badge appears and product can no longer be added to cart.
+
+##Order Details
+* Once a user checks out their order, their order details will be displayed.
+* Users will receieve an formatted HTML email receipt with their order details
+
+##Feature Product Rating
+* Visitors and users can view individual and overall ratings of a product
+* Only logged in users can create reviews
+* Only the creator of the review can delete their product review
+
+##Admin Categories
+* Admins can list and create new categories
+* Admins can add new producings using new or existing categories
+
+#Examples
+
+##User Authentication
+
+##Soldout Badge
+
+##Order Details
+
+##Feature Product Rating
+
+##Admin Categories
 
 ## Setup
 
