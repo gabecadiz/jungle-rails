@@ -2,45 +2,45 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
-#Features
+# Features
 ## User Authentication
 * A new user can go to the registration page and create a new account with a unique email address
 * A user can log into their account by going to the login page
 * passwords are saved on the database using bcrypt gem
 
-##Soldout Badge
+## Soldout Badge
 * When a product has a quantity of 0, a sold out badge appears and product can no longer be added to cart.
 
-##Order Details
+## Order Details
 * Once a user checks out their order, their order details will be displayed.
 * Users will receieve an formatted HTML email receipt with their order details
 
-##Feature Product Rating
+## Feature Product Rating
 * Visitors and users can view individual and overall ratings of a product
 * Only logged in users can create reviews
 * Only the creator of the review can delete their product review
 
-##Admin Categories
+## Admin Categories
 * Admins can list and create new categories
 * Admins can add new producings using new or existing categories
 
-#Examples
+# Examples
 
-##User Authentication
+## User Authentication
 ![User can create a new account with a unique email](https://github.com/gabecadiz/jungle-rails/blob/master/docs/jungle-signup.gif)
 
 ![User can login once they have created an account](https://github.com/gabecadiz/jungle-rails/blob/master/docs/jungle-user-login.gif)
 
-##Soldout Badge
+## Soldout Badge
 ![Soldout products display a soldout badge and can not be added to cart](https://github.com/gabecadiz/jungle-rails/blob/master/docs/jungle-product-index.gif)
 
-##Order Details
+## Order Details
 ![Order details are displayed once a user checks out successfully](https://github.com/gabecadiz/jungle-rails/blob/master/docs/jungle-cart-checkout.gif)
 
-##Feature Product Rating
+## Feature Product Rating
 ![Products display user reviews](https://github.com/gabecadiz/jungle-rails/blob/master/docs/jungle-product-review.gif)
 
-##Admin Categories
+## Admin Categories
 ![Admin create products and categories feature](https://github.com/gabecadiz/jungle-rails/blob/master/docs/jungle-admin-features.gif)
 
 ## Setup
