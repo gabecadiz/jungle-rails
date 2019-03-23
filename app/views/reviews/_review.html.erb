@@ -1,18 +1,26 @@
 <dl class="dl-horizontal">
   <dt> User </dt>
-  <dd> <%= review.user_id %> </dd>
+  <dd> <%= review.user.first_name %> </dd>
 
   <dt> Description </dt>
   <dd> <%= review.description %> </dd>
 
   <dt> Rating </dt>
-  <dd> <%= review.rating %> / 5</dd>
+  <dd>
+    <% for i in 1..review.rating do %>
+      ⭐ ️
+    <% end %>
+    <% for i in 1..(5 - review.rating) do %>
+      ★ ️
+    <% end %>
+  </dd>
 
   <% if review.user == current_user %>
-    <p>
-      <%= link_to 'Destroy Review', [review.product, review],
+   <dt><%= fa_icon('trash') %></dt>
+  <dd>
+    <%= link_to 'Delete Review', [review.product, review],
                   method: :delete,
                   data: { confirm: 'Are you sure?' } %>
-    </p>
+  </dd>
   <%end %>
 </dl>

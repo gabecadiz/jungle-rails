@@ -1,5 +1,6 @@
 <h1> Login </h1>
 
+<div class="card" style="width: 18rem;">
 <%= form_tag '/login' do %>
 
   Email: <%= text_field_tag :email %>
@@ -7,3 +8,4 @@
   <%= submit_tag "Submit" %>
 
 <% end %>
+</div>

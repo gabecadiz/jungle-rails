@@ -35,7 +35,7 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            $<%= cart_subtotal_cents / 100.0 %>
           </th>
         </tr>
       </tfoot>
@@ -53,8 +53,8 @@
             data-amount="<%= cart_subtotal_cents %>"
             data-name="Jungle"
             data-description="<% if !current_user %> Guest User Jungle Order <% else %>  <%= current_user.first_name %> <%= current_user.last_name %>'s Jungle Order" <% end %>
-            data-locale="auto"
-            data-email= "<% if !current_user %> guest@email.com <% else %>  <%= current_user.email %>" <% end %>
+            data-locale= "auto"
+            data-email= <% if !current_user %> "guest" <% else %>  <%= current_user.email %>" <% end %>
             data-currency="cad">
           </script>
         <% end %>

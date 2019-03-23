@@ -46,9 +46,9 @@
         </li>
         <span class="log-area">
           <% if current_user %>
-            Signed in as <%= current_user.email %> | <%= link_to "Logout", '/logout', :class => 'btn btn-danger' %>
+           <span class="btn btn-light login-info"> Signed in as <%= current_user.email %> </span>| <span> <%= link_to "Logout", '/logout', :class => 'btn btn-danger logout-button' %> </span>
           <% else %>
-            <%= link_to 'Login', '/login', :class => 'btn btn-primary'  %> <%= link_to 'Signup', '/signup', :class => 'btn btn-info' %>
+            <%= link_to 'Login', '/login', :class => 'btn btn-primary login-button'  %> <%= link_to 'Signup', '/signup', :class => 'btn btn-info signup-button' %>
           <% end %>
          <span>
       </ul>
