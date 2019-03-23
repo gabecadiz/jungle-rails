@@ -4,7 +4,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 #Features
 ## User Authentication
-* A new user can go to the registration page and create a new account
+* A new user can go to the registration page and create a new account with a unique email address
 * A user can log into their account by going to the login page
 * passwords are saved on the database using bcrypt gem
 
@@ -27,14 +27,21 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 #Examples
 
 ##User Authentication
+![User can create a new account with a unique email](https://github.com/gabecadiz/jungle-rails/blob/master/docs/jungle-signup.gif)
+
+![User can login once they have created an account](https://github.com/gabecadiz/jungle-rails/blob/master/docs/jungle-user-login.gif)
 
 ##Soldout Badge
+![Soldout products display a soldout badge and can not be added to cart](https://github.com/gabecadiz/jungle-rails/blob/master/docs/jungle-product-index.gif)
 
 ##Order Details
+![Order details are displayed once a user checks out successfully](https://github.com/gabecadiz/jungle-rails/blob/master/docs/jungle-cart-checkout.gif)
 
 ##Feature Product Rating
+![Products display user reviews](https://github.com/gabecadiz/jungle-rails/blob/master/docs/jungle-product-review.gif)
 
 ##Admin Categories
+![Admin create products and categories feature](https://github.com/gabecadiz/jungle-rails/blob/master/docs/jungle-admin-features.gif)
 
 ## Setup
 
