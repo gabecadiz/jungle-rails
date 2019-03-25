@@ -12,6 +12,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def authenticate_with_credentials
+    
+  end
+
   private
 
   def user_params
